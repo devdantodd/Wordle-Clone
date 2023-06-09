@@ -1,15 +1,10 @@
 * {
     color: #ffffff;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-    
-    
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 body {
     background-color: #121213;
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
 }
 
 .game-container {
@@ -22,17 +17,17 @@ body {
 
 .title-container {
     text-align: center;
-    width: 510px;
+    max-width: 100%; /* Modify the width to fit the screen */
     border-bottom: solid 1px #3a3a3c;
 }
 
 .tile-container {
-    width: 330px;
+    max-width: 100%; /* Modify the width to fit the screen */
     margin-bottom: 30px;
 }
 
 .key-container {
-    width: 510px;
+    max-width: 100%; /* Modify the width to fit the screen */
     display: flex;
     flex-wrap: wrap;
 }
@@ -62,7 +57,7 @@ body {
 .tile-container .tile {
     width: 62px;
     height: 62px;
-    border: 2px solid#3a3a3c;
+    border: 2px solid #3a3a3c;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -80,7 +75,6 @@ body {
     padding: 10px;
     margin: 0;
 }
-
 
 .tile.flip {
     animation: 0.5s linear flipping;
@@ -100,14 +94,41 @@ body {
 
 .grey-overlay {
     background-color: #3a3a3c !important;
-    border:none !important;
+    border: none !important;
 }
+
 .yellow-overlay {
     background-color: #b59f3a !important;
-    border:none !important;
+    border: none !important;
 }
 
 .green-overlay {
     background-color: #538d4e !important;
-    border:none !important;
+    border: none !important;
 }
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .title-container,
+    .tile-container,
+    .key-container {
+        width: 90%; /* Adjust the width as needed */
+    }
+    
+    .key-container button {
+        width: 40px; /* Adjust the button width as needed */
+        height: 50px; /* Adjust the button height as needed */
+    }
+    
+    .key-container button:nth-child(11) {
+        margin-left: 20px; /* Adjust the margin as needed */
+    }
+    
+    .key-container button:nth-child(20),
+    .key-container button:nth-child(28) {
+        width: 60px; /* Adjust the button width as needed */
+    }
+    
+    .tile-container .tile {
+        width: 50px; /* Adjust the tile width as needed */
+        height: 50px; /*
