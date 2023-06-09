@@ -2,10 +2,14 @@
     color: #ffffff;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
+    
+    
 }
 
 body {
     background-color: #121213;
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 .game-container {
