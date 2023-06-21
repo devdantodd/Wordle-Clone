@@ -1,10 +1,10 @@
 {
-   "version": 1,
-   "name": "wordle-clone",
+   "version": 2,
+   "name": "Wordle-Clone",
    "builds": [
       { "src": "app.js", "use": "@vercel/node" }
    ],
    "routes": [
-      { "src": "/(.*)", "dest": "/app.js" }
+      { "src": "/(.*)", "dest": "/index.js" }
    ]
 }
